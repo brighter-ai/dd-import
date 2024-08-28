@@ -156,7 +156,7 @@ class TestApi(TestCase):
     def test_get_engagement_found(self, mockGet, mockEnv):
         response = Mock(spec=Response)
         response.status_code = 200
-        response.text = '{\"count\": 2, \"results\": [{\"id\": 2, \"name\": \"engagement_dev\", \"version\": \"null\"}, {\"id\": 3, \"name\": \"engagement\", \"version\": \"null\"},  {\"id\": 4, \"name\": \"engagement\", \"version\": \"1.0.1\"}]}'
+        response.text = '{\"count\": 3, \"results\": [{\"id\": 2, \"name\": \"engagement_dev\", \"version\": \"null\"}, {\"id\": 3, \"name\": \"engagement\", \"version\": \"null\"},  {\"id\": 4, \"name\": \"engagement\", \"version\": \"1.0.1\"}]}'
         mockGet.return_value = response
 
         api = Api()
@@ -177,7 +177,7 @@ class TestApi(TestCase):
     def test_get_engagement_with_version_found(self, mockGet, mockEnv):
         response = Mock(spec=Response)
         response.status_code = 200
-        response.text = '{\"count\": 2, \"results\": [{\"id\": 2, \"name\": \"engagement_dev\", \"version\": \"null\"}, {\"id\": 3, \"name\": \"engagement\", \"version\": \"null\"},  {\"id\": 4, \"name\": \"engagement\", \"version\": \"1.0.1\"}]}'
+        response.text = '{\"count\": 3, \"results\": [{\"id\": 2, \"name\": \"engagement_dev\", \"version\": \"null\"}, {\"id\": 3, \"name\": \"engagement\", \"version\": \"null\"},  {\"id\": 4, \"name\": \"engagement\", \"version\": \"1.0.1\"}]}'
         mockGet.return_value = response
 
         api = Api()
